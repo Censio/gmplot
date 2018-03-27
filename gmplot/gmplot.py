@@ -280,7 +280,8 @@ class GoogleMapPlotter(object):
         f.write('\t\tvar myOptions = {\n')
         f.write('\t\t\tzoom: %d,\n' % (self.zoom))
         f.write('\t\t\tcenter: centerlatlng,\n')
-        f.write('\t\t\tmapTypeId: google.maps.MapTypeId.ROADMAP\n')
+        f.write("\t\t\tmapTypeId: 'satellite',\n")
+        f.write("\t\t\ttilt: 0\n")
         f.write('\t\t};\n')
         f.write(
             '\t\tvar map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);\n')
